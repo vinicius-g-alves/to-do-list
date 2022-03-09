@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body" style="background-image: url(images/background.jpg);">
+    <!-- <header> TO DO LIST </header> -->
+    <section>
+        <h1>Minhas Tarefas</h1>
+        <div>
+            <input type="text" id="atividade" name="" class="inputtask" placeholder="tarefas">
+            <input type="button" value="ADICIONAR" onclick="adicionar()" id="add" class="inputbutton">
+
+            <div class="lista">
+                <ul id="ul">
+                    <!-- tarefas em JS -->
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <!-- <p>&copy; ViniciusGarcia</p> -->
+    </footer>
+
+
+    <div class="fab">
+        <button class="main">
+        </button>
+        <ul>
+            <li>
+                <div onclick="Mycolor()">
+                    <label for="opcao1"> fundo </label>
+                    <button id="opcao1">
+                        <img class="icons" src="icons/wpp.png" alt="wallpaper" style="width: 38px;">
+                    </button>
+                </div>
+            </li>
+            <li>
+                <label for="opcao2"> cores </label>
+                <button id="opcao2">
+                    <img class="icons" src="icons/color.png" alt="wallpaper" style="width: 38px;">
+                </button>
+            </li>
+            <li>
+                <label for="opcao3"> config </label>
+                <button id="opcao3">
+                    <img class="icons" src="icons/config.png" alt="wallpaper" style="width: 38px;">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

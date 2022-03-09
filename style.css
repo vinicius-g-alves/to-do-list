@@ -1,0 +1,290 @@
+.inputtask {
+  width: 10rem;
+  padding: 10px;
+  width: 40%;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-family: "Courier New";
+  margin-bottom: 30px;
+  text-align: start;
+}
+
+.inputbutton {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-family: "Courier New";
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.inputbutton:hover {
+  background-color: blueviolet;
+  color: wheat;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  margin-left: 20px;
+  color: #888;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+  border-radius: 10px;
+}
+
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font: normal 15pt "Courier New";
+  border: 0;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  color: black;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+section {
+  background: lavender;
+  border-radius: 10px;
+  padding: 15px;
+  width: 80%;
+  margin: auto;
+  border: 1px solid gray;
+  margin-top: 90px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  margin-bottom: 5px;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+footer {
+  color: black;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ...................................... */
+
+.fab {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.fab button {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  margin-right: 40px;
+  border-radius: 30px;
+  background-color: #cb60b3;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  color: white;
+  margin: 0;
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.fab button:focus {
+  outline: none;
+}
+
+.fab button.main {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #5b19b7;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.fab button.main:before {
+  content: "⏚";
+}
+
+.fab ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  padding-right: 5px;
+  margin: 0;
+  list-style: none;
+  z-index: 10;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.fab ul li {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+  /* define a largura do padding */
+  padding: 5px 55px;
+
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.fab ul li label {
+  margin-right: 30px;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  padding: 5px 55px;
+  /* define a largura do padding branco */
+  /* background-color: gray; */
+  /* box-shadow: 0 1px 3px rgba(0,0,0,.2); */
+  color: #5b19b7;
+  border-radius: 3px;
+  height: 25px;
+  font-size: 16px;
+  pointer-events: none;
+  /* opacity:0; */
+
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.fab.show button.main,
+.fab.show button.main {
+  outline: none;
+  background-color: #7716ff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.fab.show button.main:before,
+.fab.show button.main:before {
+  content: "↑";
+}
+
+.fab.show button.main + ul,
+.fab.show button.main + ul {
+  bottom: 70px;
+}
+
+.fab.show button.main + ul li,
+.fab.show button.main + ul li {
+  margin-bottom: 20px;
+  opacity: 1;
+}
+
+.fab.show button.main + ul li:hover label,
+.fab.show button.main + ul li:hover label {
+  opacity: 1;
+}
+
+/* ............................ */
+
+.icons {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* //////////////// */
+
+/* Esconde o input */
+/* input[type='file'] {
+    display: none;
+    cursor: pointer;
+  } */
+
+/* Aparência que terá o seletor de arquivo */
+/* label {
+    background-color: #3498db;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    padding: 6px 20px
+  } */
+
+.input-file-fundo {
+    
+}
